@@ -21,6 +21,8 @@
 		73137CE9188AEE6600C8C435 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73137CE8188AEE6600C8C435 /* Main.storyboard */; };
 		73137CEC188AF1E800C8C435 /* MCMCollectionViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73137CEB188AF1E800C8C435 /* MCMCollectionViewDelegate.m */; };
 		73137CEF188AF20700C8C435 /* MCMCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 73137CEE188AF20700C8C435 /* MCMCollectionViewDataSource.m */; };
+		73137CF2188AFA1100C8C435 /* MCMCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73137CF1188AFA1100C8C435 /* MCMCollectionViewController.m */; };
+		73137CF5188AFD5E00C8C435 /* MCMCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73137CF4188AFD5E00C8C435 /* MCMCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,10 @@
 		73137CEB188AF1E800C8C435 /* MCMCollectionViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCMCollectionViewDelegate.m; sourceTree = "<group>"; };
 		73137CED188AF20700C8C435 /* MCMCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMCollectionViewDataSource.h; sourceTree = "<group>"; };
 		73137CEE188AF20700C8C435 /* MCMCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCMCollectionViewDataSource.m; sourceTree = "<group>"; };
+		73137CF0188AFA1100C8C435 /* MCMCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMCollectionViewController.h; sourceTree = "<group>"; };
+		73137CF1188AFA1100C8C435 /* MCMCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCMCollectionViewController.m; sourceTree = "<group>"; };
+		73137CF3188AFD5E00C8C435 /* MCMCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMCollectionViewCell.h; sourceTree = "<group>"; };
+		73137CF4188AFD5E00C8C435 /* MCMCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCMCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +162,8 @@
 			children = (
 				73137CBF188AECBD00C8C435 /* MCMAppDelegate.h */,
 				73137CC0188AECBD00C8C435 /* MCMAppDelegate.m */,
+				73137CF0188AFA1100C8C435 /* MCMCollectionViewController.h */,
+				73137CF1188AFA1100C8C435 /* MCMCollectionViewController.m */,
 				73137CEA188AF1E800C8C435 /* MCMCollectionViewDelegate.h */,
 				73137CEB188AF1E800C8C435 /* MCMCollectionViewDelegate.m */,
 				73137CED188AF20700C8C435 /* MCMCollectionViewDataSource.h */,
@@ -175,6 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				73137CE8188AEE6600C8C435 /* Main.storyboard */,
+				73137CF3188AFD5E00C8C435 /* MCMCollectionViewCell.h */,
+				73137CF4188AFD5E00C8C435 /* MCMCollectionViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -278,7 +288,9 @@
 			files = (
 				73137CC1188AECBD00C8C435 /* MCMAppDelegate.m in Sources */,
 				73137CBD188AECBD00C8C435 /* main.m in Sources */,
+				73137CF5188AFD5E00C8C435 /* MCMCollectionViewCell.m in Sources */,
 				73137CEC188AF1E800C8C435 /* MCMCollectionViewDelegate.m in Sources */,
+				73137CF2188AFA1100C8C435 /* MCMCollectionViewController.m in Sources */,
 				73137CEF188AF20700C8C435 /* MCMCollectionViewDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

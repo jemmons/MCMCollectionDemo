@@ -22,7 +22,7 @@
         <!--Collection View Controller - Collection View-->
         <scene sceneID="3Nn-a5-XqK">
             <objects>
-                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="MP3-sK-xx4" sceneMemberID="viewController">
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="MP3-sK-xx4" customClass="MCMCollectionViewController" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="ciX-Hv-B8D">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,15 +34,44 @@
                             <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" id="65T-f9-45S">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" id="65T-f9-45S" customClass="MCMCollectionViewCell">
                                 <rect key="frame" x="20" y="84" width="130" height="173"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="130" height="173"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I7E-AU-y1W">
+                                            <rect key="frame" x="5" y="5" width="120" height="88"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="88" placeholder="YES" id="55F-ug-fjJ"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWF-S5-vPV">
+                                            <rect key="frame" x="5" y="147" width="120" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="cWF-S5-vPV" secondAttribute="trailing" constant="5" id="9QL-fT-tcW"/>
+                                    <constraint firstItem="I7E-AU-y1W" firstAttribute="top" secondItem="65T-f9-45S" secondAttribute="top" constant="5" id="XXn-G9-4xK"/>
+                                    <constraint firstAttribute="trailing" secondItem="I7E-AU-y1W" secondAttribute="trailing" constant="5" id="rIu-SN-Qnx"/>
+                                    <constraint firstItem="I7E-AU-y1W" firstAttribute="leading" secondItem="65T-f9-45S" secondAttribute="leading" constant="5" id="u3S-bt-Vxf"/>
+                                    <constraint firstItem="cWF-S5-vPV" firstAttribute="leading" secondItem="65T-f9-45S" secondAttribute="leading" constant="5" id="v3a-sd-iEE"/>
+                                    <constraint firstAttribute="bottom" secondItem="cWF-S5-vPV" secondAttribute="bottom" constant="5" id="xy5-sm-jM2"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="I7E-AU-y1W" id="P69-R0-YJA"/>
+                                    <outlet property="label" destination="cWF-S5-vPV" id="L6J-Oy-Wt6"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
