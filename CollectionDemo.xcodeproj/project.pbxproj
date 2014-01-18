@@ -19,6 +19,8 @@
 		73137CDA188AECBD00C8C435 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 73137CD8188AECBD00C8C435 /* InfoPlist.strings */; };
 		73137CDC188AECBD00C8C435 /* CollectionDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 73137CDB188AECBD00C8C435 /* CollectionDemoTests.m */; };
 		73137CE9188AEE6600C8C435 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73137CE8188AEE6600C8C435 /* Main.storyboard */; };
+		73137CEC188AF1E800C8C435 /* MCMCollectionViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73137CEB188AF1E800C8C435 /* MCMCollectionViewDelegate.m */; };
+		73137CEF188AF20700C8C435 /* MCMCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 73137CEE188AF20700C8C435 /* MCMCollectionViewDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,10 @@
 		73137CD9188AECBD00C8C435 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		73137CDB188AECBD00C8C435 /* CollectionDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionDemoTests.m; sourceTree = "<group>"; };
 		73137CE8188AEE6600C8C435 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		73137CEA188AF1E800C8C435 /* MCMCollectionViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMCollectionViewDelegate.h; sourceTree = "<group>"; };
+		73137CEB188AF1E800C8C435 /* MCMCollectionViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCMCollectionViewDelegate.m; sourceTree = "<group>"; };
+		73137CED188AF20700C8C435 /* MCMCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMCollectionViewDataSource.h; sourceTree = "<group>"; };
+		73137CEE188AF20700C8C435 /* MCMCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCMCollectionViewDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +156,10 @@
 			children = (
 				73137CBF188AECBD00C8C435 /* MCMAppDelegate.h */,
 				73137CC0188AECBD00C8C435 /* MCMAppDelegate.m */,
+				73137CEA188AF1E800C8C435 /* MCMCollectionViewDelegate.h */,
+				73137CEB188AF1E800C8C435 /* MCMCollectionViewDelegate.m */,
+				73137CED188AF20700C8C435 /* MCMCollectionViewDataSource.h */,
+				73137CEE188AF20700C8C435 /* MCMCollectionViewDataSource.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -268,6 +278,8 @@
 			files = (
 				73137CC1188AECBD00C8C435 /* MCMAppDelegate.m in Sources */,
 				73137CBD188AECBD00C8C435 /* main.m in Sources */,
+				73137CEC188AF1E800C8C435 /* MCMCollectionViewDelegate.m in Sources */,
+				73137CEF188AF20700C8C435 /* MCMCollectionViewDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
