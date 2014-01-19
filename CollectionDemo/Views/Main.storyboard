@@ -50,23 +50,45 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWF-S5-vPV">
-                                            <rect key="frame" x="5" y="147" width="120" height="21"/>
+                                            <rect key="frame" x="5" y="122" width="120" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ODY-wv-3We">
+                                            <rect key="frame" x="40" y="93" width="50" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="fsl-bc-ciC"/>
+                                            </constraints>
+                                        </view>
+                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zbW-5g-SgR">
+                                            <rect key="frame" x="40" y="143" width="50" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="E4I-vj-n0D"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="cWF-S5-vPV" secondAttribute="trailing" constant="5" id="9QL-fT-tcW"/>
+                                    <constraint firstItem="zbW-5g-SgR" firstAttribute="top" secondItem="cWF-S5-vPV" secondAttribute="bottom" id="DrQ-3L-HUq"/>
+                                    <constraint firstItem="zbW-5g-SgR" firstAttribute="height" secondItem="ODY-wv-3We" secondAttribute="height" id="K9L-0i-J6R"/>
+                                    <constraint firstAttribute="centerX" secondItem="zbW-5g-SgR" secondAttribute="centerX" id="W6g-zS-22e"/>
                                     <constraint firstItem="I7E-AU-y1W" firstAttribute="top" secondItem="65T-f9-45S" secondAttribute="top" constant="5" id="XXn-G9-4xK"/>
+                                    <constraint firstItem="ODY-wv-3We" firstAttribute="top" secondItem="I7E-AU-y1W" secondAttribute="bottom" id="e2B-c7-nSe"/>
+                                    <constraint firstAttribute="centerX" secondItem="ODY-wv-3We" secondAttribute="centerX" id="eGx-Cp-E7J"/>
+                                    <constraint firstItem="cWF-S5-vPV" firstAttribute="top" secondItem="ODY-wv-3We" secondAttribute="bottom" id="fxp-Y9-2V6"/>
+                                    <constraint firstAttribute="bottom" secondItem="zbW-5g-SgR" secondAttribute="bottom" id="jbT-jZ-nYa"/>
                                     <constraint firstAttribute="trailing" secondItem="I7E-AU-y1W" secondAttribute="trailing" constant="5" id="rIu-SN-Qnx"/>
                                     <constraint firstItem="I7E-AU-y1W" firstAttribute="leading" secondItem="65T-f9-45S" secondAttribute="leading" constant="5" id="u3S-bt-Vxf"/>
                                     <constraint firstItem="cWF-S5-vPV" firstAttribute="leading" secondItem="65T-f9-45S" secondAttribute="leading" constant="5" id="v3a-sd-iEE"/>
-                                    <constraint firstAttribute="bottom" secondItem="cWF-S5-vPV" secondAttribute="bottom" constant="5" id="xy5-sm-jM2"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="imageView" destination="I7E-AU-y1W" id="P69-R0-YJA"/>
