@@ -41,7 +41,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="130" height="173"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I7E-AU-y1W">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I7E-AU-y1W" customClass="MCMAsyncImageView">
                                             <rect key="frame" x="5" y="5" width="120" height="88"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -96,17 +96,11 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="Jgc-LC-OvN" id="jEd-ki-CZ3"/>
-                            <outlet property="delegate" destination="yvQ-yA-YZ4" id="qEy-UX-Rth"/>
-                        </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Collection View" id="f2a-KP-jEb"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vmE-kM-zyY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="Jgc-LC-OvN" customClass="MCMCollectionViewDataSource"/>
-                <customObject id="yvQ-yA-YZ4" customClass="MCMCollectionViewDelegate"/>
             </objects>
             <point key="canvasLocation" x="552" y="-73"/>
         </scene>

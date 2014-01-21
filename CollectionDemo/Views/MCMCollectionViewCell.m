@@ -1,5 +1,5 @@
 #import "MCMCollectionViewCell.h"
-
+#import "MCMAsyncImageView.h"
 
 @implementation MCMCollectionViewCell
 #pragma mark - INIT/SETUP
