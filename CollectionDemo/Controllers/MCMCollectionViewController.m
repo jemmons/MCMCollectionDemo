@@ -1,11 +1,11 @@
 #import "MCMCollectionViewController.h"
-
 #import "MCMCollectionViewDataSource.h"
-#import "MCMCollectionViewDelegate.h"
+
+static NSString * const kDetailViewControllerID = @"DetailViewController";
+
 
 @interface MCMCollectionViewController ()
 @property MCMCollectionViewDataSource *dataSource;
-@property MCMCollectionViewDelegate *delegate;
 @end
 
 
@@ -13,9 +13,8 @@
 
 -(void)viewDidLoad{
   [self setDataSource:[MCMCollectionViewDataSource new]];
-  [self setDelegate:[MCMCollectionViewDelegate new]];
   [[self collectionView] setDataSource:[self dataSource]];
-  [[self collectionView] setDelegate:[self delegate]];
+  [[self collectionView] setDelegate:self];
   [self fetchNames];
 }
 
@@ -40,5 +39,11 @@
   [dataTask resume];
 }
 
+
+#pragma mark - COLLECTION VIEW DELEGATE
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+  UIViewController *controller = [[self storyboard] instantiateViewControllerWithIdentifier:kDetailViewControllerID];
+  [[self navigationController] pushViewController:controller animated:YES];
+}
 
 @end

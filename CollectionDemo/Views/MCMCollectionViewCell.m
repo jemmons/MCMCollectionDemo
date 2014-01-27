@@ -5,7 +5,6 @@
 #pragma mark - INIT/SETUP
 -(instancetype)initWithFrame:(CGRect)frame{
   if((self = [super initWithFrame:frame])){
-    [self setupConstraints];
     [self setupShadow];
   }
   return self;
@@ -13,15 +12,7 @@
 
 
 -(void)awakeFromNib{
-  [self setupConstraints];
   [self setupShadow];
-}
-
-
--(void)setupConstraints{
-  NSLayoutConstraint *squareConstraint = [NSLayoutConstraint constraintWithItem:[self imageView] attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:[self imageView] attribute:NSLayoutAttributeHeight multiplier:1.0f constant:0];
-  [squareConstraint setPriority:1000];
-  [[self imageView] addConstraint:squareConstraint];  
 }
 
 

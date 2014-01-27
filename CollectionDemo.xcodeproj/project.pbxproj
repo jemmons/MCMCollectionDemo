@@ -19,11 +19,15 @@
 		73137CDA188AECBD00C8C435 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 73137CD8188AECBD00C8C435 /* InfoPlist.strings */; };
 		73137CDC188AECBD00C8C435 /* CollectionDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 73137CDB188AECBD00C8C435 /* CollectionDemoTests.m */; };
 		73137CE9188AEE6600C8C435 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73137CE8188AEE6600C8C435 /* Main.storyboard */; };
-		73137CEC188AF1E800C8C435 /* MCMCollectionViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73137CEB188AF1E800C8C435 /* MCMCollectionViewDelegate.m */; };
 		73137CEF188AF20700C8C435 /* MCMCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 73137CEE188AF20700C8C435 /* MCMCollectionViewDataSource.m */; };
 		73137CF2188AFA1100C8C435 /* MCMCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73137CF1188AFA1100C8C435 /* MCMCollectionViewController.m */; };
 		73137CF5188AFD5E00C8C435 /* MCMCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73137CF4188AFD5E00C8C435 /* MCMCollectionViewCell.m */; };
 		731BAF22188DCDBB001E7B4D /* MCMAsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 731BAF21188DCDBB001E7B4D /* MCMAsyncImageView.m */; };
+		7335F4CA18945B350096AB90 /* MCMDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7335F4C918945B350096AB90 /* MCMDetailViewController.m */; };
+		737E900A189082EC000A3ED4 /* MCMNavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 737E9009189082EC000A3ED4 /* MCMNavigationControllerDelegate.m */; };
+		737E901018908633000A3ED4 /* MCMZoomDetailTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 737E900F18908633000A3ED4 /* MCMZoomDetailTransition.m */; };
+		737E901618909117000A3ED4 /* UIView+Constraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 737E901518909117000A3ED4 /* UIView+Constraints.m */; };
+		73E687C3189222CB001D5E98 /* MCMZoomMasterTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E687C2189222CB001D5E98 /* MCMZoomMasterTransition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +57,6 @@
 		73137CD9188AECBD00C8C435 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		73137CDB188AECBD00C8C435 /* CollectionDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionDemoTests.m; sourceTree = "<group>"; };
 		73137CE8188AEE6600C8C435 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		73137CEA188AF1E800C8C435 /* MCMCollectionViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMCollectionViewDelegate.h; sourceTree = "<group>"; };
-		73137CEB188AF1E800C8C435 /* MCMCollectionViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCMCollectionViewDelegate.m; sourceTree = "<group>"; };
 		73137CED188AF20700C8C435 /* MCMCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMCollectionViewDataSource.h; sourceTree = "<group>"; };
 		73137CEE188AF20700C8C435 /* MCMCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCMCollectionViewDataSource.m; sourceTree = "<group>"; };
 		73137CF0188AFA1100C8C435 /* MCMCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMCollectionViewController.h; sourceTree = "<group>"; };
@@ -63,6 +65,16 @@
 		73137CF4188AFD5E00C8C435 /* MCMCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCMCollectionViewCell.m; sourceTree = "<group>"; };
 		731BAF20188DCDBB001E7B4D /* MCMAsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMAsyncImageView.h; sourceTree = "<group>"; };
 		731BAF21188DCDBB001E7B4D /* MCMAsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCMAsyncImageView.m; sourceTree = "<group>"; };
+		7335F4C818945B350096AB90 /* MCMDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMDetailViewController.h; sourceTree = "<group>"; };
+		7335F4C918945B350096AB90 /* MCMDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCMDetailViewController.m; sourceTree = "<group>"; };
+		737E9008189082EC000A3ED4 /* MCMNavigationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMNavigationControllerDelegate.h; sourceTree = "<group>"; };
+		737E9009189082EC000A3ED4 /* MCMNavigationControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCMNavigationControllerDelegate.m; sourceTree = "<group>"; };
+		737E900E18908633000A3ED4 /* MCMZoomDetailTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMZoomDetailTransition.h; sourceTree = "<group>"; };
+		737E900F18908633000A3ED4 /* MCMZoomDetailTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCMZoomDetailTransition.m; sourceTree = "<group>"; };
+		737E901418909117000A3ED4 /* UIView+Constraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Constraints.h"; sourceTree = "<group>"; };
+		737E901518909117000A3ED4 /* UIView+Constraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Constraints.m"; sourceTree = "<group>"; };
+		73E687C1189222CB001D5E98 /* MCMZoomMasterTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMZoomMasterTransition.h; sourceTree = "<group>"; };
+		73E687C2189222CB001D5E98 /* MCMZoomMasterTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCMZoomMasterTransition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,14 +175,17 @@
 		73137CE5188AEDE900C8C435 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				737E900418908126000A3ED4 /* Transitions */,
 				73137CBF188AECBD00C8C435 /* MCMAppDelegate.h */,
 				73137CC0188AECBD00C8C435 /* MCMAppDelegate.m */,
+				737E9008189082EC000A3ED4 /* MCMNavigationControllerDelegate.h */,
+				737E9009189082EC000A3ED4 /* MCMNavigationControllerDelegate.m */,
 				73137CF0188AFA1100C8C435 /* MCMCollectionViewController.h */,
 				73137CF1188AFA1100C8C435 /* MCMCollectionViewController.m */,
-				73137CEA188AF1E800C8C435 /* MCMCollectionViewDelegate.h */,
-				73137CEB188AF1E800C8C435 /* MCMCollectionViewDelegate.m */,
 				73137CED188AF20700C8C435 /* MCMCollectionViewDataSource.h */,
 				73137CEE188AF20700C8C435 /* MCMCollectionViewDataSource.m */,
+				7335F4C818945B350096AB90 /* MCMDetailViewController.h */,
+				7335F4C918945B350096AB90 /* MCMDetailViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -190,8 +205,21 @@
 				73137CF4188AFD5E00C8C435 /* MCMCollectionViewCell.m */,
 				731BAF20188DCDBB001E7B4D /* MCMAsyncImageView.h */,
 				731BAF21188DCDBB001E7B4D /* MCMAsyncImageView.m */,
+				737E901418909117000A3ED4 /* UIView+Constraints.h */,
+				737E901518909117000A3ED4 /* UIView+Constraints.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		737E900418908126000A3ED4 /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				737E900E18908633000A3ED4 /* MCMZoomDetailTransition.h */,
+				737E900F18908633000A3ED4 /* MCMZoomDetailTransition.m */,
+				73E687C1189222CB001D5E98 /* MCMZoomMasterTransition.h */,
+				73E687C2189222CB001D5E98 /* MCMZoomMasterTransition.m */,
+			);
+			path = Transitions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,12 +320,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				731BAF22188DCDBB001E7B4D /* MCMAsyncImageView.m in Sources */,
+				737E900A189082EC000A3ED4 /* MCMNavigationControllerDelegate.m in Sources */,
 				73137CC1188AECBD00C8C435 /* MCMAppDelegate.m in Sources */,
 				73137CBD188AECBD00C8C435 /* main.m in Sources */,
+				737E901018908633000A3ED4 /* MCMZoomDetailTransition.m in Sources */,
+				73E687C3189222CB001D5E98 /* MCMZoomMasterTransition.m in Sources */,
 				73137CF5188AFD5E00C8C435 /* MCMCollectionViewCell.m in Sources */,
-				73137CEC188AF1E800C8C435 /* MCMCollectionViewDelegate.m in Sources */,
+				737E901618909117000A3ED4 /* UIView+Constraints.m in Sources */,
 				73137CF2188AFA1100C8C435 /* MCMCollectionViewController.m in Sources */,
 				73137CEF188AF20700C8C435 /* MCMCollectionViewDataSource.m in Sources */,
+				7335F4CA18945B350096AB90 /* MCMDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
