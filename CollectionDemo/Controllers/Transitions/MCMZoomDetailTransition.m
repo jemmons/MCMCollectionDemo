@@ -5,28 +5,43 @@
 @implementation MCMZoomDetailTransition
 
 -(void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext{
-  [self stuffTransitionContext:transitionContext andBlock:^(UICollectionViewController *fromController, MCMDetailViewController *toController) {
-    UICollectionViewCell *cell = [self selectedCellOfCollection:[fromController collectionView]];
-    UIView *content = [toController contentView];
-
-    CGRect fromFrameInCollection = [cell frame];
-    CGRect fromFrame = [[fromController view] convertRect:fromFrameInCollection fromView:[fromController collectionView]];
-    CGRect toFrame = [content frame];
-    CGRect toFrameInCollection = [[fromController collectionView] convertRect:toFrame fromView:[fromController view]];
-//    CGRect toFrameInCollection = [[fromController view] convertRect:toFrame fromView:[fromController collectionView]];
+  [self insertViewsFromControllersInContext:transitionContext andBlock:^(UICollectionViewController *fromController, MCMDetailViewController *toController) {
     
-    [[cell superview] bringSubviewToFront:cell];
-    [content setFrame:fromFrame];
-    [[toController view] setAlpha:0.0f];
+    UIView *cellView = [self selectedCellOfCollection:[fromController collectionView]];
+    CGRect fromFrameActual = [cellView frame];
+    CGRect cellFromFrame = [[fromController view] convertRect:fromFrameActual fromView:[cellView superview]];
+    CGRect contentFromFrame = [[toController view] convertRect:fromFrameActual fromView:[cellView superview]];
 
+    UIView *contentView = [toController contentView];
+    CGRect toFrameActual = [contentView frame];
+    CGRect cellToFrame = [[fromController view] convertRect:toFrameActual fromView:[contentView superview]];
+    CGRect contentToFrame = [[toController view] convertRect:toFrameActual fromView:[contentView superview]];
+    
+    UIView *cellSnapshot = [cellView snapshotViewAfterScreenUpdates:YES];
+    dispatch_async(dispatch_get_main_queue(), ^{
+      [cellView setHidden:YES];
+    });
+    [cellSnapshot setFrame:cellFromFrame];
+    [[fromController view] addSubview:cellSnapshot];
+
+    UIView *contentSnapshot = [contentView snapshotViewAfterScreenUpdates:YES];
+    dispatch_async(dispatch_get_main_queue(), ^{
+      [contentView setHidden:YES];
+    });
+    [contentSnapshot setFrame:contentFromFrame];
+    [[toController view] addSubview:contentSnapshot];
+    
+    [[toController view] setAlpha:0.0f];
+    
     [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
-      [cell setFrame:toFrameInCollection];
-      [cell layoutIfNeeded];
-      [content layoutIfNeeded];
-//      [content setFrame:CGRectMake(toFrame.origin.x, toFrame.origin.y + 164.0f, toFrame.size.width, toFrame.size.height)];
       [[toController view] setAlpha:1.0f];
+      [cellSnapshot setFrame:cellToFrame];
+      [contentSnapshot setFrame:contentToFrame];
     } completion:^(BOOL finished) {
-      [cell setFrame: fromFrameInCollection];
+      [cellSnapshot removeFromSuperview];
+      [contentSnapshot removeFromSuperview];
+      [cellView setHidden:NO];
+      [contentView setHidden:NO];
       [transitionContext completeTransition:YES];
     }];
   }];
@@ -39,7 +54,7 @@
 
 
 #pragma mark - UTILITY
--(void)stuffTransitionContext:(id<UIViewControllerContextTransitioning>)context andBlock:(void (^)(UICollectionViewController *fromController, MCMDetailViewController *toController))someBlock{
+-(void)insertViewsFromControllersInContext:(id<UIViewControllerContextTransitioning>)context andBlock:(void (^)(UICollectionViewController *fromController, MCMDetailViewController *toController))someBlock{
   NSParameterAssert([[context viewControllerForKey:UITransitionContextFromViewControllerKey] isKindOfClass:[UICollectionViewController class]]);
   NSParameterAssert([[context viewControllerForKey:UITransitionContextToViewControllerKey] isKindOfClass:[MCMDetailViewController class]]);
   
